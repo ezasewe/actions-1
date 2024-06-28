@@ -8,13 +8,17 @@ jobs:
        steps:
        - name: Checkout Repo
          uses: actions/checkout@v4
-       - name: Install Cowsay
-         run: sudo apt-get install cowsay -y
-       - name: Generate ASCII Artwork
-         run: cowsay -f dragon "Run for cover, Monster Coming ...RAWR" >> dragon.txt  
-       - name: test if File Exists
-         run: find ~ -name dragon -type f -print
-       - name: read file
-         run: cat dragon.txt
+    #    - name: Install Cowsay
+    #      run: sudo apt-get install cowsay -y
+    #    - name: Generate ASCII Artwork
+    #      run: cowsay -f dragon "Run for cover, Monster Coming ...RAWR" >> dragon.txt  
+    #    - name: test if File Exists
+    #      run: find ~ -name dragon -type f -print
+    #    - name: read file
+    #      run: cat dragon.txt
        - name: list Repo Files
          run: ls -ltra
+       - name: Executing shell script
+         run: |
+          chmod +x ascii-script.sh
+          ./ascii-script.sh

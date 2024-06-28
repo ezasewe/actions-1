@@ -8,14 +8,13 @@ jobs:
        steps:
        - name: Checkout Repo
          uses: actions/checkout@v4
-       - name: List and Read files
-         run: |
-            echo "First Github Actions Job"
-            ls -ltra
-            cat README.md
+       - name: Install Cowsay
+         run: sudo apt-get install cowsay -y
        - name: Generate ASCII Artwork
          run: cowsay -f dragon "Run for cover, Monster Coming ...RAWR" >> dragon.txt  
-#       - name: list files
-#         run: ls
-#       - name: read file
-#         run: cat README.md
+       - name: test if File Exists
+         run: find ~ -name dragon -type f -print
+       - name: read file
+         run: cat dragon.txt
+       - name: list Repo Files
+         run: ls -ltra

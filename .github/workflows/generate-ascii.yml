@@ -9,7 +9,7 @@ jobs:
         - name: Install Cowsay program
           run: sudo apt-get install cowsay -y
         - name: Execute Cowsay CMD
-          run: cowsay-f dragon "Run for cover, Dragon is coming...ROAR" >> dragon.txt
+          run: cowsay -f dragon "Run for cover, Dragon is coming...ROAR" >> dragon.txt
         - name: sleep for 15 sec
           run: sleep 15
 

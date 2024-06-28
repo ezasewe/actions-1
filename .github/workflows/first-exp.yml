@@ -8,10 +8,14 @@ jobs:
        steps:
        - name: Checkout Repo
          uses: actions/checkout@v4
-       - name: welcome message
-         run: echo "First Github Actions Job"
-       - name: list files
-         run: ls
-       - name: read file
-         run: cat README.md
-
+       - name: List and Read files
+         run: |
+            echo "First Github Actions Job"
+            ls -ltra
+            cat README.md
+       - name: Generate ASCII Artwork
+         run: cowsay -f dragon "Run for cover, Monster Coming ...RAWR" >> dragon.txt  
+#       - name: list files
+#         run: ls
+#       - name: read file
+#         run: cat README.md

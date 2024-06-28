@@ -1,1 +1,1 @@
-# actions-1
+# Exploring GitHub Actions
